@@ -98,7 +98,8 @@ medianStepsNa <- median(activityByDate$`sum(steps)`, na.rm = TRUE)
 
 Make a nice table of the results to high light the differences. 
 ```{r}
-meanMedian <- data.frame( NAs.filed = c(meanStepsNa, medianStepsNa), NAs.removed = c(meanSteps, medianSteps), row.names = c("mean", "median"))
+meanMedian <- data.frame( NAs.filed = c(meanStepsNa, medianStepsNa), 
+                         NAs.removed = c(meanSteps, medianSteps), row.names = c("mean",                             "median"))
 meanMedian
 ```
 
@@ -106,7 +107,7 @@ Based on the calculated means and medians adding the missing data has very littl
 
 ## Are there differences in activity patterns between weekdays and weekends?
 
-```{r}
+```{r, warning=FALSE}
 activityNa <-mutate(activityNa, weekend= ifelse(wday(date) == c(1,7), 
                                                 "weekend", "weekday"))
 
@@ -118,8 +119,7 @@ Loading the needed libary
 library("lattice")
 ```
 
-Plotting the activity
-
+Plotting the activity and separating weekends and weekdays to separate plots. 
 ```{r}
 activityWeek <- summarise(group_by(activityNa, weekend, interval), steps = mean(steps))
 
