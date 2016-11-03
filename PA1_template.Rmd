@@ -33,7 +33,7 @@ activityByDate <- summarise(group_by(activity, date), sum(steps))
 hist(activityByDate$`sum(steps)`, xlab = "steps", main ="Daily activity")
 ```
 
-Calculating the mean and meadian for total number of steps taken per day and ignoring missing values. 
+Calculating the mean and median for total number of steps taken per day and ignoring missing values. 
 
 The mean number of steps per day: 
 ```{R}
