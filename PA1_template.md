@@ -44,7 +44,7 @@ hist(activityByDate$`sum(steps)`, xlab = "steps", main ="Daily activity")
 
 ![](PA1_template_files/figure-html/unnamed-chunk-3-1.png)<!-- -->
 
-Calculating the mean and meadian for total number of steps taken per day and ignoring missing values. 
+Calculating the mean and median for total number of steps taken per day and ignoring missing values. 
 
 The mean number of steps per day: 
 
